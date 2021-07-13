@@ -1,0 +1,50 @@
+* { border: none; }
+    body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+    table
+    {
+        border: 0;
+        border-collapse: collapse;
+    }
+    table th
+    {
+        background-color: white;
+        color: #333;
+        font-weight: bold;
+		 border: 0;
+    }
+    table th, table td
+    {
+        padding: 5px;
+        border: 0;
+    }
+	
+	
+
+	#dvContents{
+	height:297mm;
+    width:210mm;
+	background-color:white;
+	border: 0;
+	display: none;
+	}
+	
+	#printtablebutton{
+	display: block;
+	}
+	
+	#neweventform{
+	display: block;
+	}
+	
+	 fieldset {
+     min-width: 100px;
+     display: inline-block;
+ }
+
+ fieldset input{
+     float: right;
+ }

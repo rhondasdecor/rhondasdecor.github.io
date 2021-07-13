@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Template_plain.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head>
+
+    <title> </title>
+    
+    <!-- this code from stackoverflow http://stackoverflow.com/questions/2255291/print-the-contents-of-a-div -->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    
+    <script type="text/javascript">
+        function CopyElem(elem)
+        {
+           $('form input[type=text]').each(function() {
+             $(this).attr('value', $(this).val());
+           });
+
+           $('form input[type=checkbox]').each(function() {
+             $(this).attr('checked', $(this).prop("checked"));
+           });
+        }
+    
+        function PrintElem(elem)
+        {
+            Popup($(elem).html());
+        }
+
+        function Popup(data) 
+        {
+            var mywindow = window.open('', 'my div', 'height=400,width=600');
+            mywindow.document.write('<html><head><title>my div</title>');
+            /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+            mywindow.document.write('</head><body >');
+            mywindow.document.write(data);
+            mywindow.document.write('</body></html>');
+    
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10
+    
+            mywindow.print();
+            mywindow.close();
+    
+            return true;
+        }
+    </script>
+    
+    <!-- end code from stack overflow -->     
+    </head>
+    
+    <body>
+     
+    <p>Complete this form</p>
+    
+    <div id="container" style="border: 2px solid; width: 600px; padding: 5px;">
+           
+      <form>
+        Name:<br/>
+        <input type="text" name="F_Name" size="60"></input>
+        <br/><br/>
+        Street Address:<br/>
+        <input type="text" name="F_Address" size="30"></input>
+        City:
+        <input type="text" name="F_City" size="12"></input>
+        State:
+        <input type="text" name="F_State" size="2"></input>
+        Zip Code:
+        <input type="text" name="F_ZipCode" size="5"></input>
+        <br/><br/>
+        <input type="reset" value="Reset"></input>
+        <br/><br/>
+     
+      </form>
+    
+    </div> <!-- end #container -->
+    
+      <input type="button" value="Print" onclick="CopyElem();PrintElem('#container')" />
+    
+      <div id="copyoutput" style="display: none;"></div>    
+    
+    </body>
+    </html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title>admin.html</title>
+	 
+	 <!--<link rel="stylesheet" href="tablestyle.css" type="text/css" />-->
+	 
+	    <script src="admin.js"></script>
+		<script src="jquery.js"></script>
+	
+	  <style>
+	  
+	  body{
+	  background-color: gold;
+	  }
+	  
+	  
+	  .center {
+  text-align: center;
+   color: purple;
+ }
+	  
+
+<!-- header -->	  
+   #hrhonda{
+   font-size: 50px;
+   color: purple;
+       }
+	   
+	    #htel{
+   font-size: 30px;
+   color: purple;
+       }
+
+<!-- nav menu -->   
+   #divnavmenu{
+   margin: auto;
+   }
+   
+   .topnav{
+    position: relative;
+  overflow: hidden;
+    margin: auto;
+ background-color: purple;
+  width: 400px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+   }
+   
+  
+* {box-sizing: border-box}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: purple;
+  color: white;
+}
+
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    display: block;
+  }
+  
+  }
+    
+</style>
+
+
+<style>
+#template{
+    height:297mm;
+    width:210mm;
+	background-color:white;
+}
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+</style>
+
+<!--
+The following CSS styles are used for the HTML Table. 
+The style tag has been assigned ID attribute so that it 
+can be accessed using JavaScript.
+-->
+
+<style id="newform_style" type="text/css">	
+* { border: none; }
+    body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+    table
+    {
+        border: 0;
+        border-collapse: collapse;
+    }
+    table th
+    {
+        background-color: white;
+        color: #333;
+        font-weight: bold;
+		 border: 0;
+    }
+    table th, table td
+    {
+        padding: 5px;
+        border: 0;
+    }
+	
+	
+
+	#dvContents{
+	height:297mm;
+    width:210mm;
+	background-color:white;
+	border: 0;
+	display: block;
+	}
+	
+	#printablebutton{
+	display: block;
+	}
+	
+	#neweventform{
+	display: block;
+	}
+	
+	 fieldset {
+     min-width: 100px;
+     display: inline-block;
+ }
+
+ fieldset input{
+     float: right;
+ }
+ 
+ 
+
+</style>
+   
+ <!--
+<style id="table_style" type="text/css">
+* { border: none; }
+    body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+    table
+    {
+        border: 0;
+        border-collapse: collapse;
+    }
+    table th
+    {
+        background-color: white;
+        color: #333;
+        font-weight: bold;
+		 border: 0;
+    }
+    table th, table td
+    {
+        padding: 5px;
+        border: 0;
+    }
+	
+	
+
+	#dvContents{
+	height:297mm;
+    width:210mm;
+	background-color:white;
+	border: 0;
+	display: inline;
+	}
+	
+	#printablebutton{
+	display: inline;
+	}
+	
+	#neweventform{
+	display: inline;
+	}
+	
+	 fieldset {
+     min-width: 100px;
+     display: inline-block;
+ }
+
+ fieldset input{
+     float: right;
+ }
+ 
+ #divbut{
+ display: block;
+ }
+</style>
+ -->
+
+ 
+   </head>
+ 
+<body>
+  <h1 id='hrhonda' class="center">Rhonda's D&eacute;cor</h1> 
+   <h2 id='htel' class="center">313 1234567</h2> 
+<br>
+
+
+
+
+<!-- Top navigation -->
+<div class="topnav">
+    <a href="index.html" >Home</a>
+    <a href="prices.html" >Prices</a>
+  <a href="about.html">About</a>
+  <a  onclick="eventoption();">Admin</a>
+<!--  <input type="button" onclick="eventoption();" value="Print"/>-->
+
+     </div>
+
+
+<br><br>
+
+<script>
+</script>
+<br/>
+
+
+<script type="text/javascript">
+    </script>
+    
+
+<script>
+//document.getElementById("thtest").innerHTML = vartest;
+</script>
+
+<br/>
+<dialog id="mydia" style='width: 500px'>
+
+</dialog>
+
+<dialog id="mydia1" style='width: 500px'>
+
+</dialog>
+ 
+ 
+<dialog id="createneweventform">
+
+</dialog>
+ 
+ <div class="form-popup" id="neweventform">
+  <div id="container" style="width: 600px; padding: 5px;">
+     <form class="form-container">
+    <h1>Rhonda’s DéCor</h1>
+	
+	<br>
+	<br>
+	
+ <fieldset>
+    <label class='labelnewevent' for="title"><b>Name</b></label>
+    <input type="text"  id='neweventname' required>
+	
+	<br>
+	<br>
+	
+	<label class='labelnewevent' for="theme"><b>Theme</b></label>
+    <input type="text"  id='neweventtheme'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>Colors</b></label>
+    <input type="text"  id='neweventcolors'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>Event Date</b></label>
+    <input type="text"  id='neweventdate'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>Start Time</b></label>
+    <input type="text"  id='neweventstarttime'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>SetUp Time</b></label>
+    <input type="text"  id='neweventsetuptime'>
+	
+	<br>
+	<br>
+	
+	<label for="totalcharges"><b>Total Charges</b></label>
+	<input type="text"  id='neweventtotalcharges' onfocusout="updatebalance()">
+	
+	<br>
+	<br>
+	
+	<label for="totalpaid"><b>Total Paid</b></label>
+    <input type="text"  id='neweventtotalpaid' onfocusout="updatebalance()">
+	
+	<br>
+	<br>
+	
+	<label for="balance"><b>Balance Due</b></label>
+    <input type="text"  id='neweventbalancedue'>
+  </fieldset>   	
+	<br>
+	<br>
+	
+
+  </form>
+  </div> <!-- end #container -->
+</div>
+ 
+ <div id='divbut'>
+    <button  class="btnsave" onclick="savenewevent()">Save</button>
+    <!--<button  class="btncancel" onclick="cancelnewevent()">Cancel</button>-->
+	<!--<button  class="btnprint" onclick="printnewevent()">Print</button>-->
+	<!--<input type="button" value="Print Form Elements" onclick="CopyElem();PrintElem('#container')" /> -->
+	<input type="button" value="Print" onclick="printformelements()" />
+	<!--<input type="button" value="Print New Event" onclick="printnewevent()" /> -->
+	</div>
+    
+
+</body>
+</html>
+

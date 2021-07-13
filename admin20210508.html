@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title>admin.html</title>
+	 
+	    <script src="admin.js"></script>
+		<script src="jquery.js"></script>
+	
+	  <style>
+	  
+	  body{
+	  background-color: gold;
+	  }
+	  
+	  
+	  .center {
+  text-align: center;
+   color: purple;
+ }
+	  
+
+<!-- header -->	  
+   #hrhonda{
+   font-size: 50px;
+   color: purple;
+       }
+	   
+	    #htel{
+   font-size: 30px;
+   color: purple;
+       }
+
+<!-- nav menu -->   
+   #divnavmenu{
+   margin: auto;
+   }
+   
+   .topnav{
+    position: relative;
+  overflow: hidden;
+    margin: auto;
+ background-color: purple;
+  width: 400px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+   }
+   
+  
+* {box-sizing: border-box}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: purple;
+  color: white;
+}
+
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    display: block;
+  }
+  
+  }
+    
+</style>
+
+
+<style>
+#template{
+    height:297mm;
+    width:210mm;
+	background-color:white;
+}
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+</style>
+
+<!--
+The following CSS styles are used for the HTML Table. 
+The style tag has been assigned ID attribute so that it 
+can be accessed using JavaScript.
+-->
+
+<style id="newform_style" type="text/css">	
+<!--<style id="table_style" type="text/css">-->
+* { border: none; }
+    body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+    table
+    {
+        border: 0;
+        border-collapse: collapse;
+    }
+    table th
+    {
+        background-color: white;
+        color: #333;
+        font-weight: bold;
+		 border: 0;
+    }
+    table th, table td
+    {
+        padding: 5px;
+        border: 0;
+    }
+	
+	
+
+	#dvContents{
+	height:297mm;
+    width:210mm;
+	background-color:white;
+	border: 0;
+	display: none;
+	}
+	
+	#printtablebutton{
+	display: block;
+	}
+	
+	#neweventform{
+	display: block;
+	}
+	
+	 fieldset {
+     min-width: 100px;
+     display: inline-block;
+ }
+
+ fieldset input{
+     float: right;
+ }
+</style>
+   
+ 
+<style id="table_style" type="text/css">
+* { border: none; }
+    body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+    table
+    {
+        border: 0;
+        border-collapse: collapse;
+    }
+    table th
+    {
+        background-color: white;
+        color: #333;
+        font-weight: bold;
+		 border: 0;
+    }
+    table th, table td
+    {
+        padding: 5px;
+        border: 0;
+    }
+	
+	
+
+	#dvContents{
+	height:297mm;
+    width:210mm;
+	background-color:white;
+	border: 0;
+	display: none;
+	}
+	
+	#printtablebutton{
+	display: block;
+	}
+	
+	#neweventform{
+	display: block;
+	}
+	
+	 fieldset {
+     min-width: 100px;
+     display: inline-block;
+ }
+
+ fieldset input{
+     float: right;
+ }
+</style>
+ 
+
+
+<script type="text/javascript">
+/*
+Printing HTML Table using JavaScript
+When the Print button is clicked, first a JavaScript popup 
+window is created.
+Then the Table CSS styles are extracted from the style tag and 
+is written to the popup window HTML.
+And then the contents of the HTML DIV i.e. HTML Table to be 
+printed are extracted and written to the popup window HTML.
+Finally, the popup window is printed using the JavaScript 
+Window Print command.
+
+
+vartest = 'this is a test var';
+
+    function PrintTable() {
+        var printWindow = window.open('', '', 'height=200,width=400');
+        //printWindow.document.write('<html><head><title>Table Contents</title>');
+ 
+        //Print the Table CSS.
+        var table_style = document.getElementById("table_style").innerHTML;
+        printWindow.document.write('<style type = "text/css">');
+        printWindow.document.write(table_style);
+        printWindow.document.write('</style>');
+        printWindow.document.write('</head>');
+ 
+        //Print the DIV contents i.e. the HTML Table.
+        printWindow.document.write('<body>');
+        var divContents = document.getElementById("dvContents").innerHTML;
+        printWindow.document.write(divContents);
+        printWindow.document.write('</body>');
+ 
+        printWindow.document.write('</html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+	
+	*/
+</script>
+ 
+   </head>
+ 
+<body>
+  <h1 id='hrhonda' class="center">Rhonda's D&eacute;cor</h1> 
+   <h2 id='htel' class="center">313 1234567</h2> 
+<br>
+
+
+
+
+<!-- Top navigation -->
+<div class="topnav">
+    <a href="index.html" >Home</a>
+    <a href="prices.html" >Prices</a>
+  <a href="about.html">About</a>
+  <a  onclick="eventoption();">Admin</a>
+<!--  <input type="button" onclick="eventoption();" value="Print"/>-->
+
+     </div>
+
+
+<br><br>
+
+<script>
+</script>
+
+<div id="dvContents" style="border: 0; padding: 5px">
+    <table id='tableprint' cellspacing="0" rules="all" border="0">
+        <tr>
+            <th>Rhonda’s DéCor </th>
+            <th id='thtest'>   </th>
+            <th> this is mw  </th>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+        <tr>
+            <td id='tdname'>Kinslee’s 1st Birthday Party</td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+        
+        <tr>
+            <td id='tdtheme'>Ice Cream Theme</td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td id='tdcolors'>Pastel colors</td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		
+		<tr>
+            <td id='tdeventdate'>Saturday, September 19,2020  </td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td id='tdstarttime'>3:00pm</td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td id='tdsetuptime'>Set up 11:00am</td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>Balloon Garland around cart</td>
+            <td>$150 </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>Backdrop w/full balloon garland </td>
+            <td>$200  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>Total</td>
+            <td>$350  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>Deposit</td>
+            <td>$50  </td>
+            <td>  </td>
+        </tr>
+		
+		<tr>
+            <td>Balance due Saturday, September 19,2020</td>
+            <td>$300  </td>
+            <td>  </td>
+        </tr>
+		
+    </table>
+</div>
+<br/>
+
+
+<script type="text/javascript">
+    </script>
+    
+    
+<input id='printtablebutton' type="button" onclick="PrintTable();" value="Print Table"/>
+
+<script>
+//document.getElementById("thtest").innerHTML = vartest;
+</script>
+
+<br/>
+<dialog id="mydia">
+
+</dialog>
+ 
+ 
+<dialog id="createneweventform">
+
+</dialog>
+ 
+ <div class="form-popup" id="neweventform">
+  <div id="container" style="border: 2px solid; width: 600px; padding: 5px;">
+     <form class="form-container">
+    <h1>Rhonda’s DéCor</h1>
+	
+	<br>
+	<br>
+	
+ <fieldset>
+    <label class='labelnewevent' for="title"><b>Name</b></label>
+    <input type="text"  id='neweventname' required>
+	
+	<br>
+	<br>
+	
+	<label class='labelnewevent' for="theme"><b>Theme</b></label>
+    <input type="text"  id='neweventtheme'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>Colors</b></label>
+    <input type="text"  id='neweventcolors'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>Event Date</b></label>
+    <input type="text"  id='neweventdate'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>Start Time</b></label>
+    <input type="text"  id='neweventstarttime'>
+	
+	<br>
+	<br>
+	
+	<label for="colors"><b>SetUp Time</b></label>
+    <input type="text"  id='neweventsetuptime'>
+	
+	<br>
+	<br>
+	
+	<label for="totalcharges"><b>Total Charges</b></label>
+    <input type="text"  id='neweventtotalcharges'>
+	
+	<br>
+	<br>
+	
+	<label for="totalpaid"><b>Total Paid</b></label>
+    <input type="text"  id='neweventtotalpaid'>
+	
+	<br>
+	<br>
+	
+	<label for="balance"><b>Balance Due</b></label>
+    <input type="text"  id='neweventbalancedue'>
+  </fieldset>   	
+	<br>
+	<br>
+	
+
+  </form>
+  </div> <!-- end #container -->
+</div>
+ 
+    <button  class="btnsave" onclick="savenewevent()">Save</button>
+    <button  class="btncancel" onclick="cancelnewevent()">Close</button>
+	<!--<button  class="btnprint" onclick="printnewevent()">Print</button>-->
+	<input type="button" value="Print Form Elements" onclick="CopyElem();PrintElem('#container')" />
+
+    
+
+</body>
+</html>
+
